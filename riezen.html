@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reizen door Italië</title>
+  <meta charset="utf-8">
+
+  <style>
+    body { margin: 0; padding: 0; font-family: Verdana, sans-serif; }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
+  background: linear-gradient(90deg,
+    #ce2b37 0% 33.33%,
+    #ffffff 33.33% 66.66%,
+    #009246 66.66% 100%
+  );
+
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.header-inner {
+  width: 950px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+
+    #inhoud { margin-bottom: 30px; }
+    #inhoud { margin-top: 100px; 
+}
+
+
+    h1 { font-family: Kalam, sans-serif; font-size: 2em; margin: 0 0 10px 0; }
+    h2 { margin: 0 0 10px 0; }
+
+    #header h1, #header p { font-weight: bolder; }
+    #header h1 { color: rgb(0, 0, 0); }
+    
+
+    
+    .row {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      margin: 16px 0;
+      box-sizing: border-box;
+    }
+
+   
+    .txtimg {
+      width: 30%;
+      height: 300px;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .txtimg img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    
+    .txt {
+      width: 70%;      
+      float: right;
+      box-sizing: border-box;
+      padding: 16px;
+      overflow: auto;
+    }
+
+    
+    .right .txtimg { float: right; }
+    .right .txt { float: left; }
+
+    
+    .txt a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .txt a:hover { text-decoration: underline; }
+@media (max-width: 500px) {
+
+  .row {
+    height: auto;   /* hoogte automatisch laten meegroeien */
+  }
+
+  .txtimg {
+    width: 100%;
+    height: auto;
+    float: none;    /* float uitzetten */
+  }
+
+  .txtimg img {
+    height: auto;
+  }
+
+  .txt {
+    width: 100%;
+    float: none;    /* float uitzetten */
+  }
+
+}
+    
+    #footer {
+      width: 100%;
+      background-color: #6699cc;
+      padding: 2em 0;
+      font-family: Calibri, sans-serif;
+      color: white;
+      overflow: auto;
+    }
+    #footer .footer-inner {
+      width: 950px;
+      margin: 0 auto;
+      overflow: auto;
+    }
+    #footer .col {
+      width: 25%;
+      float: left;
+      padding: 1em;
+      box-sizing: border-box;
+      min-height: 6em;
+    }
+    #footer a { color: white; }
+
+    #socials img {
+      width: 35px;
+      height: 35px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Reizen door Italië</h1>
+    <p>
+      Op deze pagina vind je korte stukjes over steden die ik bezocht heb.
+      Klik op “meer lezen” om naar de pagina van die stad te gaan.
+    </p>
+  </div>
+
+  <div id="inhoud">
+
+    <!-- Nappels -->
+    <div class="row left">
+      <div class="txtimg">
+        <img src="logo.jpg" alt="Nappels">
+      </div>
+      <div class="txt">
+        <h2>Nappels</h2>
+        <p>
+          Nappels is een prachtige stad waar ik veel over te vertellen heb.
+          <a href="nappels.html">Klik hier om meer te lezen &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Milaan -->
+    <div class="row right">
+      <div class="txtimg">
+        <img src="logo.jpg" alt="Milaan">
+      </div>
+      <div class="txt">
+        <h2>Milaan</h2>
+        <p>
+          Milaan is modern, druk en zit vol mooie gebouwen en winkels.
+          <a href="milaan.html">Klik hier om meer te lezen &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Rome moet nog komen -->
+    <div class="row left">
+      <div class="txtimg">
+        <img src="logo.jpg" alt="Rome">
+      </div>
+      <div class="txt">
+        <h2>Rome</h2>
+        <h1> nog aan het werk er voor</h1>
+        <p>
+          kont nogRome heeft overal geschiedenis: oude ruïnes, pleinen en monumenten.
+          <a href="rome.html">Klik hier om meer te lezen &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div class="footer-inner">
+
+      <div class="col">
+        <img src="logo.jpg" width="150" alt="logo">
+      </div>
+
+      <div class="col">
+        <a href="logo.jpg" target="_self">riezen door italië</a><br>
+       
+      </div>
+
+      <div class="col">
+        Rivko kleijne Snuverink<br>
+        almere<br>
+        
+      </div>
+
+      <div class="col">
+        <div id="socials">
+          <img src="logo.jpg" alt="social">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

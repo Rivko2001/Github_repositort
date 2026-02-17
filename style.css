@@ -4,36 +4,27 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+/* Header (Italiaanse vlag) */
 #header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-
-  /* 33% rood, 33% wit, 33% groen (zoals jij vroeg) */
   background: linear-gradient(90deg,
     #ce2b37 0% 33.33%,
     #ffffff 33.33% 66.66%,
     #009246 66.66% 100%
   );
-
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-@media only screen and (min-width: 1200px){ 
-  body {
-    background-color: rgb(174, 230, 173);
-  }}
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(208, 9, 9);
-  }}
 
 .header-inner {
   width: 950px;
   margin: 0 auto;
   padding: 20px 0;
   position: relative;
+  box-sizing: border-box;
 }
 
 #header h1 {
@@ -59,9 +50,18 @@ body {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* Hero image */
+/* Background kleuren per schermgrootte */
+@media only screen and (min-width: 1200px) {
+  body { background-color: rgb(174, 230, 173); }
+}
+
+@media only screen and (max-width: 600px) {
+  body { background-color: rgb(208, 9, 9); }
+}
+
+
 .hero {
-  margin-top: 120px; /* ruimte voor vaste header */
+  margin-top: 120px; 
   width: 100%;
   height: 500px;
   overflow: hidden;
@@ -71,9 +71,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Inhoud */
+
 #inhoud {
   width: 950px;
   margin: 30px auto;
@@ -82,3 +83,40 @@ body {
 h2 {
   margin-top: 0;
 }
+
+
+.content-row {
+  width: 950px;
+  margin: 40px auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.content-text { width: 60%; }
+.content-img  { width: 40%; }
+
+.content-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media (max-width: 600px) {
+  #inhoud, .content-row {
+    width: 95%;
+  }
+
+  .content-row {
+    flex-direction: column;
+  }
+
+  .content-text, .content-img {
+    width: 100%;
+  }
+
+  .content-img img {
+    height: 220
+    }}

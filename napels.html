@@ -3,117 +3,118 @@
 <head>
   <title>Napels</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="margin:0; padding:0; font-family: Verdana, sans-serif; background:#fff;">
+<body>
 
- 
-  <div id="header" style="
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    background: linear-gradient(90deg,
-      #ce2b37 0% 33.33%,
-      #ffffff 33.33% 66.66%,
-      #009246 66.66% 100%
-    );
-  ">
-   
-    <div style="
-      width: 950px;
-      margin: 0 auto;
-      padding: 18px 0;
-      position: relative;
-      box-sizing: border-box;
-      height: 70px;
-    ">
 
-      
-      <div style="text-align:center;">
-        <span style="
-          display:inline-block;
-          font-family: Kalam, sans-serif;
-          font-size: 2em;
-          font-weight: bold;
-          color: #000;
-          background: rgba(255,255,255,0.75);
-          padding: 6px 14px;
-          border-radius: 10px;
-        ">Nappels</span>
-      </div>
-
-      
-      <a href="riezen.html" style="
-        position: absolute;
-        right: 0;
-        top: 16px;
-        text-decoration: none;
-        font-weight: bold;
-        color: #fff;
-        border: 2px solid #fff;
-        padding: 8px 12px;
-        border-radius: 6px;
-        background: rgba(0,0,0,0.15);
-      ">← Terug naar overzicht</a>
-
+  <div id="header">
+    <div class="header-inner">
+      <h1>Napels</h1>
+      <a href="index.html" class="back-btn">← Terug naar overzicht</a>
     </div>
   </div>
 
- 
-  <div style="
-    margin-top: 90px;   /* ruimte voor vaste header */
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-  ">
+  
+  <div class="hero">
     <img
-      src="https://media.makeameme.org/created/bedankt-voor-het-bf01414d79.jpg"
-      alt="Nappels"
-      style="
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      "
+      src="IMG_5266_nappels.jpg"
+      alt="Napels"
     >
   </div>
-  <div id="inhoud" style="width: 950px; margin: 30px auto; box-sizing: border-box;">
 
-    <h2 style="margin: 0 0 12px 0;">Een eerste indruk</h2>
+  <!-- INHOUD -->
+  <div id="inhoud">
 
-    <p style="margin: 0 0 12px 0; line-height: 1.5;">
-      Nappels is een prachtige stad waar ik veel over te vertellen heb. In deze pagina
-      zet ik later mijn eigen tekst en foto’s.
-    </p>
-
-    <p style="margin: 0 0 12px 0; line-height: 1.5;">
-      Deze pagina gebruikt <b>inline CSS</b> (alles staat in <code>style="..."</code>) en ik gebruik
-      <b>CSS position</b> (de header is <code>position: fixed</code> en de knop is <code>position: absolute</code>).
-    </p>
-
-    <div style="
-      position: relative;
-      margin-top: 22px;
-      padding: 18px;
-      border: 2px solid #000;
-      height: 120px;
-      box-sizing: border-box;
-    ">
-      <div style="
-        position: absolute;
-        right: 12px;
-        bottom: 12px;
-        background: yellow;
-        padding: 6px 10px;
-        font-weight: bold;
-      ">
-        position: absolute (bewijs)
+    <!-- BLOK 1 -->
+    <div class="content-row">
+      <div class="content-text">
+        <h2>Een eerste indruk</h2>
+        <p>
+          Napels is een stad die zichzelf ziet als uniek in de wereld — en zelfs uniek binnen Italië.
+          En eerlijk gezegd: dat voel je meteen wanneer je er aankomt. De stad is rauw, levendig,
+          chaotisch en tegelijkertijd warm en vol karakter.
+        </p>
+        <p>
+          Overal hoor je getoeter, zie je scooters langs je heen schieten en hangt er wasgoed boven
+          de smalle straatjes. Het is een stad die leeft.
+        </p>
       </div>
-      <p style="margin:0; line-height:1.5;">
-        Dit vak laat zien dat ik ook echt <b>position</b> gebruik op deze pagina.
-      </p>
+
+      <div class="content-img">
+        <img
+          src="IMG_5268_nappels.jpg"
+          alt="Napels straat"
+        >
+      </div>
+    </div>
+
+    <!-- BLOK 2 -->
+    <div class="content-row">
+      <div class="content-text">
+        <h2>De avond van de landstitel</h2>
+        <p>
+          Op de avond dat ik in Napels aankwam, won SSC Napoli de landstitel. Dat maakte mijn eerste
+          avond meteen onvergetelijk. De hele stad kleurde blauw, de kleur van de club.
+        </p>
+        <p>
+          Vlaggen hingen uit de ramen, vuurwerk knalde door de straten en overal stonden mensen te
+          zingen en te juichen. Toen het laatste fluitsignaal klonk, barstte het feest los.
+        </p>
+      </div>
+
+      <div class="content-img">
+        <img
+          src="IMG_5258_nappels.jpg"
+          alt="Viering SSC Napoli"
+        >
+      </div>
+    </div>
+
+    
+    <div class="content-row">
+      <div class="content-text">
+        <h2>Pompeji en de Vesuvius</h2>
+        <p>
+          De volgende dag stond er een totaal andere ervaring op het programma: een bezoek aan Pompeji.
+          Deze stad werd in het jaar 79 na Christus bedolven onder as en puimsteen na de uitbarsting
+          van de Vesuvius.
+        </p>
+        <p>
+          Het contrast met het levendige Napels kon bijna niet groter zijn. Waar Napels bruist van energie,
+          hangt in Pompeji een stille, indrukwekkende rust.
+        </p>
+      </div>
+
+      <div class="content-img">
+        <img
+          src="pompe.jpeg"
+          alt="Pompeji"
+        >
+      </div>
+    </div>
+
+ 
+    <div class="content-row">
+      <div class="content-text">
+        <h2>Terug in Napels</h2>
+        <p>
+          Terug in Napels merkte ik opnieuw hoe bijzonder de stad is. Het is misschien niet de meest nette
+          of georganiseerde stad van Italië, maar juist dat ongepolijste maakt het zo echt.
+        </p>
+        <p>
+          En dan natuurlijk de pizza: een zachte, luchtige rand en een dunne, soepele bodem. Simpel belegd,
+          maar perfect in balans. Napels is geen stad die je alleen bezoekt je beleeft haar.
+        </p>
+      </div>
+
+      <div class="content-img">
+        <img
+          src="napels_pizza.jpeg"
+          alt="Napolitaanse pizza"
+        >
+      </div>
     </div>
 
   </div>

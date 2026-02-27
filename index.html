@@ -3,34 +3,9 @@
 <head>
   <title>Reizen door Italië</title>
   <meta charset="utf-8">
-
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { margin: 0; padding: 0; font-family: Verdana, sans-serif; }
-
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-
-  background: linear-gradient(90deg,
-    #ce2b37 0% 33.33%,
-    #ffffff 33.33% 66.66%,
-    #009246 66.66% 100%
-  );
-
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-
-.header-inner {
-  width: 950px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
+  
 
     #inhoud { margin-bottom: 30px; }
     #inhoud { margin-top: 100px; 
@@ -152,8 +127,9 @@
 
     <!-- Nappels -->
     <div class="row left">
-      <div class="txtimg">
-        <img src="napels.jpeg" alt="Napels">
+   
+   <div class="txtimg">
+       <img src="img/napels.jpeg" alt="Napels" >
       </div>
       <div class="txt">
         <h2>Napels</h2>
@@ -167,7 +143,7 @@
     <!-- Milaan -->
     <div class="row right">
       <div class="txtimg">
-        <img src="logo.jpg" alt="Milaan">
+        <img src="img/pasta.jpeg"alt="Milaan">
       </div>
       <div class="txt">
         <h2>Milaan</h2>
@@ -180,7 +156,7 @@
 
     <div class="row left">
       <div class="txtimg">
-        <img src="Genua_1.jpg" alt="Rome">
+        <img src="img/Genua_1.jpg" alt="Rome">
       </div>
       <div class="txt">
         <h2>Genua</h2>
@@ -193,7 +169,35 @@
         </p>
       </div>
     </div>
+  </div>
+  <div class="pizza-section">
 
+  <h2>Pizza in Italië</h2>
+
+<div class="pizza-section">
+
+  <h2>Pizza en Pasta in Italië</h2>
+
+  <p>
+    Italië staat bekend om zijn pizza en pasta. Natuurlijk heb ik in de weken dat ik
+    in Italië was bijna elke avond pizza of pasta gegeten.
+    Ik heb een aantal foto's voor jullie bewaard.
+    Als je op de knop hieronder drukt, zie je telkens een ander gerecht.
+  </p>
+
+  <div class="pizza-image">
+    <img id="pizzaFoto"
+         src="img/pasta1.JPG"
+         alt="Pizza of pasta">
+  </div>
+
+  <button id="pizzaKnop">Toon ander gerecht</button>
+
+</div>
+
+<script src="javaschript/pizza.js"></script>
+
+</div>
   </div>
 
   <div id="footer">
@@ -202,7 +206,6 @@
       <div class="col">
         <img src="logo.jpg" width="150" alt="logo">
       </div>
-
       <div class="col">
         <a href="logo.jpg" target="_self">riezen door italië</a><br>
        

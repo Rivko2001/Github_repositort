@@ -120,3 +120,39 @@ h2 {
   .content-img img {
     height: 220
     }}
+    .pizza-section {
+  width: 950px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.pizza-section p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.pizza-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#pizzaKnop {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ce2b37;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#pizzaKnop:hover {
+  background-color: #009246;
+}
+.pizza-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

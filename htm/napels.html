@@ -4,38 +4,36 @@
   <title>Napels</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/header-inner.css"
+  <link rel="stylesheet" href="../css/header-inner.css">
+</head>
 
+<body>
 
-<div id="header">
-  <div class="header-inner">
-    <h1>Napels</h1>
+  <div id="header">
+    <div class="header-inner">
+      <h1>Napels</h1>
 
-    <div class="menu-group">
-      <div class="dropdown">
-        <button class="menu-btn">Andere steden ▾</button>
-        <div class="dropdown-content">
-          <a href="rome.html">Rome</a>
-          <a href="milaan.html">Milaan</a>
-          <a href="napels.html">Napels</a>
+      <div class="menu-group">
+        <div class="dropdown">
+          <button class="menu-btn">Andere steden ▾</button>
+          <div class="dropdown-content">
+            <a href="rome.html">Rome</a>
+            <a href="milaan.html">Milaan</a>
+            <a href="Genua.html">Genua</a>
+          </div>
         </div>
+
+        <a href="../index.html" class="menu-btn">← Terug naar overzicht</a>
       </div>
-
-      <a href="../index.html" class="menu-btn">← Terug naar overzicht</a>
     </div>
-</div> 
-  </div>
-</div>
-  
-  <div class="hero">
-    <img
-      src="../img/IMG_5266_nappels.jpg"
-      alt="Napels"
-    >
   </div>
 
-  <!-- INHOUD -->
+  <div class="hero">
+    <img src="../img/IMG_5266_nappels.jpg" alt="Napels">
+  </div>
+
   <div id="inhoud">
+</div>
 
     <!-- BLOK 1 -->
     <div class="content-row">
@@ -119,15 +117,38 @@
         </p>
       </div>
 
-      <div class="content-img">
-        <img
-          src="../img/napels_pizza.jpeg"
-          alt="Napolitaanse pizza"
-        >
-      </div>
+  </div>
+
+  <!-- Rating panel + effects -->
+  <div id="ratingPanel" class="rating-panel">
+    <h3>Beoordeel deze stad</h3>
+
+    <div class="rating-item" data-key="pace">
+      <div class="label">Ben je te gauw geweest?</div>
+      <div class="stars" data-value="0"></div>
     </div>
 
+    <div class="rating-item" data-key="city">
+      <div class="label">Wat vond je van de stad?</div>
+      <div class="stars" data-value="0"></div>
+    </div>
+
+    <div class="rating-item" data-key="food">
+      <div class="label">Eten & drinken</div>
+      <div class="stars" data-value="0"></div>
+    </div>
+
+    <div class="rating-item" data-key="vibe">
+      <div class="label">Sfeer / vibe</div>
+      <div class="stars" data-value="0"></div>
+    </div>
+
+    <button id="submitRatings" class="rate-btn">Verstuur score</button>
+    <div id="avgOut" class="avg-out"></div>
   </div>
+
+  <div id="effectsLayer"></div>
+  <script src="../javaschript/ratings.js"></script>
 
 </body>
 </html>

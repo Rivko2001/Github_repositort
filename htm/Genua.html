@@ -5,20 +5,35 @@
   <title>Genua</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header-inner.css">
 </head>
 
 <body>
+
   <div id="header">
     <div class="header-inner">
-      <h1>Ganua</h1>
-      <a href="../index.html" class="back-btn">← Terug naar overzicht van</a>
+      <h1>Genua</h1>
+
+      <div class="menu-group">
+        <div class="dropdown">
+          <button class="menu-btn">Andere steden ▾</button>
+          <div class="dropdown-content">
+            <a href="rome.html">Rome</a>
+            <a href="milaan.html">Milaan</a>
+            <a href="napels.html">Napels</a>
+          </div>
+        </div>
+
+        <a href="../index.html" class="menu-btn">← Terug naar overzicht</a>
+      </div>
     </div>
   </div>
 
-
   <div class="hero">
-    <img src="../img/Genua_1.jpg" alt="Genua">
+    <img src="../img/IMG_5266_nappels.jpg" alt="Napels">
   </div>
+
+  <div id="inhoud">
 
  
   <div id="inhoud">
@@ -38,6 +53,39 @@ Het mooiste wat je hier kunt doen, is eigenlijk dwalen. Gewoon zonder plan door 
 
 Maar uiteindelijk ben ik toch weer teruggekomen bij mijn hoste
     </p>
+    <!-- Rating panel (links vast) -->
+<div id="ratingPanel" class="rating-panel">
+  <h3>Beoordeel deze stad</h3>
+
+  <div class="rating-item" data-key="pace">
+    <div class="label">Ben je te gauw geweest?</div>
+    <div class="stars" data-value="0" aria-label="Ben je te gauw geweest?"></div>
+  </div>
+
+  <div class="rating-item" data-key="city">
+    <div class="label">Wat vond je van de stad?</div>
+    <div class="stars" data-value="0" aria-label="Wat vond je van de stad?"></div>
+  </div>
+
+  <div class="rating-item" data-key="food">
+    <div class="label">Eten & drinken</div>
+    <div class="stars" data-value="0" aria-label="Eten & drinken"></div>
+  </div>
+
+  <div class="rating-item" data-key="vibe">
+    <div class="label">Sfeer / vibe</div>
+    <div class="stars" data-value="0" aria-label="Sfeer / vibe"></div>
+  </div>
+
+  <button id="submitRatings" class="rate-btn">Verstuur score</button>
+  <div id="avgOut" class="avg-out"></div>
+</div>
+
+<!-- Effects layer -->
+<div id="effectsLayer"></div>
+
+<!-- Zorg dat deze script-tag ONDERAAN staat, vlak voor </body> -->
+<script src="../javaschript/ratings.js"></script>
   </div>
 
 </body>

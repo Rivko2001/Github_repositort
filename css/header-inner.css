@@ -1,0 +1,66 @@
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Groepeert dropdown + terug knop */
+.menu-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* Zelfde stijl voor beide knoppen */
+.menu-btn {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.menu-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown inhoud */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  border: 2px solid black;
+  border-top: none;
+  z-index: 10;
+}
+
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Uitklappen */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

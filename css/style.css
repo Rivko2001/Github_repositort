@@ -52,11 +52,11 @@ body {
 
 /* Background kleuren per schermgrootte */
 @media only screen and (min-width: 1200px) {
-  body { background-color: rgb(174, 230, 173); }
+  body { background-color: rgb(200, 245, 199); }
 }
 
 @media only screen and (max-width: 600px) {
-  body { background-color: rgb(208, 9, 9); }
+  body { background-color: rgb(202, 111, 111); }
 }
 
 
@@ -257,10 +257,40 @@ h2 {
   to { transform: translateY(110vh); }
 }
 
-/* Op mobiel: panel smaller en iets lager */
-@media (max-width: 700px) {
-  .rating-panel {
-    width: 220px;
-    top: 110px;
+@media screen and (max-width: 768px) {
+
+  .content-row {
+    flex-direction: column;   /* tekst boven, foto onder */
   }
+
+  .content-text {
+    width: 100%;
+  }
+
+  .content-img {
+    width: 100%;
+  }
+
+  .content-img img {
+    width: 100%;
+    height: auto; 
+  }
+ body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
 }
+

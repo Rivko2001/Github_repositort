@@ -4,9 +4,25 @@
   <title>Reizen door Italië</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Internal CSS voor float-layout (alleen hier) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  
+  <!-- Registreer bij https://fontawesome.com -->
+  <script src="https://kit.fontawesome.com/e766bcebc4.js" crossorigin="anonymous"></script>
   <style>
+    #map {
+    height:400px;
+    }
+
+    /* Zie: https://gist.github.com/adriennn/4678d585ac3774650c16 */
+    .fontawesome_icon{
+    color: rgb(235, 140, 8);   
+    }
     #inhoud { margin-top: 120px; width: 950px; margin-left:auto; margin-right:auto; }
 
     .row { width: 100%; height: 300px; overflow: hidden; margin: 16px 0; box-sizing: border-box; }
@@ -33,6 +49,20 @@
   </div>
 
   <div id="inhoud">
+     <div id="inhoud" style="margin-top:120px; width:950px; margin-left:auto; margin-right:auto;">
+
+    <h2>plaats</h2>
+    <p>Klik op de marker voor informatie.</p>
+
+    <!-- KAART CONTAINER -->
+    <div id="map"></div>
+<script src="javaschript/kaart.js"></script>
+  </div>
+
+
+ 
+
+
 
     <div class="row right">
       <div class="txtimg"><img src="img/pasta.jpeg" alt="Milaan"></div>
@@ -42,7 +72,9 @@
       </div>
     </div>
 
-    <div class="row left">
+   
+      
+ <div class="row left">
       <div class="txtimg"><img src="img/Genua_1.jpg" alt="Genua"></div>
       <div class="txt">
         <h2>Genua</h2>
@@ -51,7 +83,7 @@
          Sindsdien heeft deze stad een speciale plek in mijn hart. De bijzondere geschiedenis van Genua,
          een stad die is opgegroeid tussen de bergen, die uitgroeide tot een machtige handelsstad en zich door de eeuwen heen steeds verder heeft ontwikkeld heeft mij echt geraakt.
         De combinatie van smalle straatjes, indrukwekkende gebouwen en de ligging tussen zee en bergen heeft mijn hart veroverd.
-          <a href="htm/Genua.html">Klik hier om meer te lezen &raquo;</a>
+          <a href="htm/genua.html">Klik hier om meer te lezen &raquo;</a>
         </p>>
       </div>
     </div>
@@ -84,5 +116,6 @@
   </div>
 
   <script src="javaschript/pizza.js"></script>
+  
 </body>
 </html>

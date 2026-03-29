@@ -1,26 +1,41 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Napels</title>
+  <title>Milaan</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/header-inner.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  
+  <!-- Registreer bij https://fontawesome.com -->
+  <script src="https://kit.fontawesome.com/e766bcebc4.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
   <div id="header">
     <div class="header-inner">
-      <h1>Napels</h1>
+      <h1>Milaan</h1>
 
       <div class="menu-group">
         <div class="dropdown">
           <button class="menu-btn">Andere steden ▾</button>
           <div class="dropdown-content">
-            <a href="rome.html">Rome</a>
-            <a href="genua.html">Genua</a>
             <a href="napels.html">Napels</a>
+            <a href="milaan.html">Milaan</a>
+            <a href="genua.html">Genua</a>
           </div>
         </div>
 
@@ -28,10 +43,8 @@
       </div>
     </div>
   </div>
-
-  <div class="hero">
-    <img src="../img/milan_58522026/photos/stadpoort.jpg" alt="Napels">
-  </div>
+  <div id="map" data-city="Milaan"></div>
+<script src="../javaschript/kaart_leukpunten.js"></script>
 
 <div id="inhoud">
 

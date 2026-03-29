@@ -64,3 +64,8 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.fontawesome_icon {
+  color: rgb(235, 140, 8);
+  text-align: center;
+  line-height: 40px;
+}

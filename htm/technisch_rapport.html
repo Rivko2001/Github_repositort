@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technisch rapport website</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#2f6fed;
+      --border:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+    .container{
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px 40px;
+    }
+    .hero{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      margin-bottom: 24px;
+    }
+    h1{
+      margin:0 0 8px;
+      font-size: 2rem;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+    }
+    .section{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.05);
+      margin-bottom: 20px;
+    }
+    h2{
+      margin-top:0;
+      font-size:1.35rem;
+      color:#111827;
+      border-left: 5px solid var(--accent);
+      padding-left: 12px;
+    }
+    p{
+      margin: 0 0 14px;
+    }
+    .note{
+      background:#f8fafc;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px 16px;
+      color:#374151;
+    }
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Technisch rapport website</h1>
+      <p class="subtitle">Eindversie van het technische rapport over het ontwerp, de opbouw en het werkproces van mijn website.</p>
+    </section>
+
+    <section class="section">
+      <h2>Bestandsstructuur</h2>
+      <p>
+        Voor dit project heb ik mijn bestanden opgedeeld in voor mij logische mappen. Zo heb ik aparte mappen gemaakt voor CSS, data, HTML, images en JavaScript. Daarnaast staan het logo en de index in de hoofdmap. Deze structuur heb ik bewust gekozen om overzicht te houden en sneller bestanden terug te kunnen vinden.
+      </p>
+      <p>
+        Binnen de image-map heb ik eerst alle afbeeldingen bij elkaar gezet, maar later heb ik dit verder gestructureerd. Zo heb ik per stad aparte mappen gemaakt. Dit maakt het overzichtelijker en zorgt ervoor dat ik makkelijker nieuwe afbeeldingen kan toevoegen zonder dat alles door elkaar komt te staan.
+      </p>
+      <p>
+        Ook bij mijn databestanden heb ik gekozen voor structuur. In plaats van alle gegevens van steden in één bestand te zetten, heb ik ervoor gekozen om per stad data te organiseren. Hierdoor blijft het overzicht behouden en kan ik later eenvoudiger nieuwe steden toevoegen. Ik had bijvoorbeeld het idee om Florence nog toe te voegen, maar door tijdsgebrek is dat niet gelukt.
+      </p>
+      <p>
+        In eerste instantie was mijn plan om ongeveer twintig steden toe te voegen. Uiteindelijk heb ik ervoor gekozen om me te focussen op kwaliteit in plaats van kwantiteit. Daarom heb ik drie steden uitgewerkt, zodat het concept van mijn website duidelijk en goed uitgewerkt is.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>CSS</h2>
+      <p>
+        Voor de CSS had ik in het begin het idee om voor elk onderdeel een apart CSS-bestand te maken. Dit leek mij logisch, omdat ik in eerdere projecten had gemerkt dat één groot CSS-bestand snel onoverzichtelijk wordt en dat er veel dubbele code in komt te staan.
+      </p>
+      <p>
+        Tijdens het werken aan dit project liep ik echter tegen een probleem aan. De verschillende CSS-bestanden gingen elkaar soms overschrijven. Dit kwam doordat de volgorde waarin CSS wordt ingeladen bepaalt welke stijl uiteindelijk wordt toegepast. De onderste regel wint, waardoor eerdere stijlen soms niet meer werkten zoals bedoeld.
+      </p>
+      <p>
+        Daarom heb ik uiteindelijk besloten om alles samen te voegen in één CSS-bestand. Dit zorgde voor meer overzicht en minder fouten. Vervolgens heb ik AI gebruikt om mijn CSS te laten controleren en dubbele of overbodige regels eruit te halen. Dit hielp mij om de code schoner en efficiënter te maken.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>HTML</h2>
+      <p>
+        Voor de HTML heb ik gewerkt met meerdere pagina’s. Ik heb een indexpagina gemaakt die dient als startpunt van de website. Op deze pagina staat een binnenkomend filmpje en daaronder een kaart met de steden die ik heb bezocht. Deze kaart heb ik zo opgezet dat ik later eenvoudig nieuwe steden kan toevoegen.
+      </p>
+      <p>
+        Naast de indexpagina heb ik voor elke stad een aparte HTML-pagina gemaakt. Dit zorgt voor overzicht en maakt het makkelijker om per stad content aan te passen of uit te breiden.
+      </p>
+      <p>
+        Binnen de HTML heb ik gewerkt met logische blokken. Elk blok bestaat uit een combinatie van tekst en een afbeelding. Dit heb ik gedaan zodat ik makkelijk blokken kan toevoegen, verwijderen of aanpassen zonder dat de hele pagina opnieuw opgebouwd moet worden. Op de indexpagina wisselen de afbeeldingen en tekst elkaar af, terwijl op de andere pagina’s de structuur consistenter is gehouden.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>JavaScript en data</h2>
+      <p>
+        Voor JavaScript heb ik meerdere onderdelen gebruikt. Zo heb ik JavaScript ingezet voor de interactieve kaart, maar ook voor de pizza-knop op mijn website. In het begin had ik alleen een pizza, maar later heb ik dit uitgebreid met pasta, waardoor het een wisselende knop is geworden. Dit zorgt voor meer interactie op de pagina.
+      </p>
+      <p>
+        Daarnaast heb ik JavaScript gebruikt voor mijn datavisualisatie. De data heb ik niet direct in mijn scripts gezet, maar in aparte databestanden. Ik heb ervoor gekozen om deze data per stad op te slaan in plaats van alles in één bestand te zetten. Dit maakt het makkelijker om later nieuwe steden toe te voegen of bestaande data aan te passen.
+      </p>
+      <p>
+        De pizza-knop heb ik zelf geschreven. Voor de rating-knop met effecten zoals confetti en bewegende smileys heb ik AI gebruikt om een basis te genereren. Daarna heb ik wel steeds gevraagd wat de code precies doet, zodat ik ook begrijp wat ik gebruik en het eventueel zelf kan aanpassen.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Leaflet</h2>
+      <p>
+        Voor de kaarten op mijn website heb ik gebruik gemaakt van Leaflet. Op elke stedenpagina staat een kaart met de tien leukste plekken om te bezoeken. Hierbij heb ik ook een legenda toegevoegd, zodat duidelijk is wat de verschillende punten betekenen. Deze legenda staat bewust boven de zoekfunctie, zodat deze goed zichtbaar blijft tijdens het gebruik van de kaart.
+      </p>
+      <p>
+        Ik heb ervoor gekozen om de kaart rustig en overzichtelijk te houden. Daarom heb ik een lichte kaartstijl gebruikt, zodat de punten duidelijker naar voren komen en niet wegvallen in een drukke achtergrond.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Testen en verschillende apparaten</h2>
+      <p>
+        Voor de prestaties van mijn website heb ik mijn afbeeldingen verkleind tot onder de 1 MB. Dit heb ik gedaan om te zorgen dat de website sneller laadt.
+      </p>
+      <p>
+        Daarnaast heb ik veel aandacht besteed aan het testen van mijn website op verschillende apparaten. Met behulp van de F12-tool in Google Chrome heb ik mijn website bekeken op verschillende schermformaten, zoals mobiel, tablet en laptop. Hierbij heb ik samen met AI gezocht naar oplossingen om de layout goed te laten werken op alle schermen. Uiteindelijk heb ik de website zo aangepast dat deze bruikbaar is op meerdere devices.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>GitHub</h2>
+      <p>
+        Voor versiebeheer heb ik gebruik gemaakt van GitHub. Hiermee kon ik mijn werk opslaan en delen met de docent. Daarnaast kon ik hiermee mijn voortgang bijhouden en voorkwam ik dat alles alleen lokaal opgeslagen werd.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Werkproces met AI</h2>
+      <p>
+        Tijdens het project heb ik gebruik gemaakt van AI, zoals ChatGPT. AI heeft mij geholpen bij het oplossen van problemen en het verbeteren van mijn code, bijvoorbeeld bij het maken van interactieve elementen en bij het opschonen van mijn CSS.
+      </p>
+      <p>
+        Wel heb ik steeds geprobeerd om te begrijpen wat de code doet door om uitleg te vragen. Dat vond ik belangrijk, omdat ik niet zomaar code wilde overnemen zonder te weten hoe het werkt.
+      </p>
+      <p>
+        Een nadeel van AI was dat het niet altijd in één keer goed werkte. Soms moest ik meerdere keren mijn vraag aanpassen voordat ik een bruikbaar resultaat kreeg. Hierdoor bleef het belangrijk om zelf kritisch te kijken naar de code en niet alles blind over te nemen.
+      </p>
+      <p>
+        Zonder AI had mijn website er waarschijnlijk minder goed uitgezien en had ik meer tijd nodig gehad om bepaalde functies werkend te krijgen. Tegelijkertijd heb ik geprobeerd om AI vooral als hulpmiddel te gebruiken en zelf de controle te houden over het eindresultaat.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Opmerking</h2>
+      <div class="note">
+        SEO heb ik niet opgenomen in dit rapport, omdat dit tijdens de lessen niet behandeld is.
+      </div>
+    </section>
+
+    <footer>
+      Technisch rapport website
+    </footer>
+  </div>
+</body>
+</html>

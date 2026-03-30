@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woordenboek HTML, CSS en JavaScript</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      background:#f4f7fb;
+      color:#1f2937;
+      line-height:1.6;
+    }
+    .container{
+      max-width:1000px;
+      margin:40px auto;
+      padding:0 20px 40px;
+    }
+    .hero,.section{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.06);
+      margin-bottom:22px;
+    }
+    h1{margin:0 0 10px; font-size:2rem;}
+    h2{
+      margin-top:0;
+      border-left:5px solid #2563eb;
+      padding-left:12px;
+    }
+    p{margin:0 0 12px;}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:14px;
+    }
+    th, td{
+      border:1px solid #e5e7eb;
+      padding:12px;
+      text-align:left;
+      vertical-align:top;
+    }
+    th{
+      background:#eff6ff;
+    }
+    code{
+      background:#f3f4f6;
+      padding:2px 6px;
+      border-radius:6px;
+      font-family: Consolas, monospace;
+    }
+    .small{
+      color:#6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Woordenboek HTML, CSS en JavaScript</h1>
+      <p>
+        Dit woordenboek is een simpel overzicht van veelgebruikte onderdelen in HTML, CSS en JavaScript.
+        Ik heb de betekenissen kort en duidelijk gehouden, zodat ik het kan gebruiken bij mijn website en technische rapport.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>HTML</h2>
+      <p class="small">HTML gebruik je om de structuur van een webpagina op te bouwen.</p>
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Betekenis</th>
+        </tr>
+        <tr><td><code>&lt;html&gt;</code></td><td>Dit is het begin van de hele HTML-pagina.</td></tr>
+        <tr><td><code>&lt;head&gt;</code></td><td>Hierin staan instellingen van de pagina, zoals de titel en koppelingen naar CSS.</td></tr>
+        <tr><td><code>&lt;body&gt;</code></td><td>Hier staat alles wat zichtbaar is op de website.</td></tr>
+        <tr><td><code>&lt;title&gt;</code></td><td>De titel van de pagina die je bovenin het tabblad ziet.</td></tr>
+        <tr><td><code>&lt;meta&gt;</code></td><td>Extra informatie over de pagina, bijvoorbeeld tekenset of scherminstellingen.</td></tr>
+        <tr><td><code>&lt;h1&gt;</code></td><td>De belangrijkste kop van de pagina.</td></tr>
+        <tr><td><code>&lt;h2&gt;</code></td><td>Een tussenkop onder de hoofdkop.</td></tr>
+        <tr><td><code>&lt;p&gt;</code></td><td>Een alinea tekst.</td></tr>
+        <tr><td><code>&lt;a&gt;</code></td><td>Een link naar een andere pagina of website.</td></tr>
+        <tr><td><code>&lt;img&gt;</code></td><td>Een afbeelding.</td></tr>
+        <tr><td><code>&lt;div&gt;</code></td><td>Een algemeen blok om onderdelen te groeperen.</td></tr>
+        <tr><td><code>&lt;section&gt;</code></td><td>Een groter inhoudsblok of onderdeel van de pagina.</td></tr>
+        <tr><td><code>&lt;header&gt;</code></td><td>De bovenkant van de pagina, vaak met titel of menu.</td></tr>
+        <tr><td><code>&lt;nav&gt;</code></td><td>Een navigatiemenu met links.</td></tr>
+        <tr><td><code>&lt;main&gt;</code></td><td>Het hoofdgedeelte van de pagina.</td></tr>
+        <tr><td><code>&lt;footer&gt;</code></td><td>De onderkant van de pagina.</td></tr>
+        <tr><td><code>&lt;ol&gt;</code></td><td>Een geordende lijst met nummers.</td></tr>
+        <tr><td><code>&lt;ul&gt;</code></td><td>Een ongeordende lijst met bolletjes.</td></tr>
+        <tr><td><code>&lt;li&gt;</code></td><td>Een item in een lijst.</td></tr>
+        <tr><td><code>&lt;button&gt;</code></td><td>Een knop waarop je kunt klikken.</td></tr>
+        <tr><td><code>alt=""</code></td><td>Beschrijving van een afbeelding, handig als de afbeelding niet laadt en voor toegankelijkheid.</td></tr>
+        <tr><td><code>class=""</code></td><td>Naam die je aan meerdere elementen kunt geven om ze met CSS te stylen.</td></tr>
+        <tr><td><code>id=""</code></td><td>Unieke naam voor één specifiek element.</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>CSS</h2>
+      <p class="small">CSS gebruik je om de vormgeving van een website te regelen.</p>
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Betekenis</th>
+        </tr>
+        <tr><td><code>color</code></td><td>Verandert de kleur van tekst.</td></tr>
+        <tr><td><code>background-color</code></td><td>Verandert de achtergrondkleur.</td></tr>
+        <tr><td><code>font-size</code></td><td>Past de grootte van tekst aan.</td></tr>
+        <tr><td><code>font-family</code></td><td>Geeft aan welk lettertype wordt gebruikt.</td></tr>
+        <tr><td><code>width</code></td><td>Bepaalt de breedte van een element.</td></tr>
+        <tr><td><code>height</code></td><td>Bepaalt de hoogte van een element.</td></tr>
+        <tr><td><code>max-width</code></td><td>Geeft een maximale breedte, handig voor responsive design.</td></tr>
+        <tr><td><code>margin</code></td><td>Ruimte buiten een element.</td></tr>
+        <tr><td><code>padding</code></td><td>Ruimte binnen een element.</td></tr>
+        <tr><td><code>border</code></td><td>Een rand om een element.</td></tr>
+        <tr><td><code>border-radius</code></td><td>Maakt hoekjes rond.</td></tr>
+        <tr><td><code>display</code></td><td>Bepaalt hoe een element zich gedraagt op de pagina.</td></tr>
+        <tr><td><code>display: flex</code></td><td>Zet elementen in een flexbox, handig om uit te lijnen.</td></tr>
+        <tr><td><code>flex-direction</code></td><td>Bepaalt of flex-items naast elkaar of onder elkaar staan.</td></tr>
+        <tr><td><code>justify-content</code></td><td>Regelt de horizontale verdeling van elementen in flexbox.</td></tr>
+        <tr><td><code>align-items</code></td><td>Regelt de uitlijning van elementen in flexbox.</td></tr>
+        <tr><td><code>gap</code></td><td>Ruimte tussen flex- of grid-elementen.</td></tr>
+        <tr><td><code>text-align</code></td><td>Regelt de uitlijning van tekst.</td></tr>
+        <tr><td><code>position</code></td><td>Bepaalt hoe een element geplaatst wordt.</td></tr>
+        <tr><td><code>box-shadow</code></td><td>Geeft een schaduw aan een element.</td></tr>
+        <tr><td><code>overflow</code></td><td>Regelt wat er gebeurt als inhoud buiten een blok valt.</td></tr>
+        <tr><td><code>@media</code></td><td>Gebruik je om de site anders te tonen op mobiel, tablet of laptop.</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>JavaScript</h2>
+      <p class="small">JavaScript gebruik je om een website interactief te maken.</p>
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Betekenis</th>
+        </tr>
+        <tr><td><code>let</code></td><td>Hiermee maak je een variabele die nog kan veranderen.</td></tr>
+        <tr><td><code>const</code></td><td>Hiermee maak je een variabele die niet meer verandert.</td></tr>
+        <tr><td><code>function</code></td><td>Een blok code dat iets uitvoert.</td></tr>
+        <tr><td><code>if</code></td><td>Controleert of iets waar is.</td></tr>
+        <tr><td><code>else</code></td><td>Voert iets anders uit als de <code>if</code> niet waar is.</td></tr>
+        <tr><td><code>for</code></td><td>Een herhaling, bijvoorbeeld om meerdere dingen langs te gaan.</td></tr>
+        <tr><td><code>document.getElementById()</code></td><td>Zo pak je één element op de pagina via zijn id.</td></tr>
+        <tr><td><code>document.querySelector()</code></td><td>Zo selecteer je het eerste element dat past bij een CSS-selector.</td></tr>
+        <tr><td><code>addEventListener()</code></td><td>Luistert naar een actie, bijvoorbeeld een klik op een knop.</td></tr>
+        <tr><td><code>click</code></td><td>Een klik-gebeurtenis.</td></tr>
+        <tr><td><code>innerHTML</code></td><td>Verandert de inhoud van een element.</td></tr>
+        <tr><td><code>textContent</code></td><td>Verandert alleen de tekst van een element.</td></tr>
+        <tr><td><code>src</code></td><td>Kan in JavaScript worden aangepast om een andere afbeelding te tonen.</td></tr>
+        <tr><td><code>classList.add()</code></td><td>Voegt een class toe aan een element.</td></tr>
+        <tr><td><code>classList.remove()</code></td><td>Haalt een class weg van een element.</td></tr>
+        <tr><td><code>classList.toggle()</code></td><td>Zet een class aan of uit.</td></tr>
+        <tr><td><code>console.log()</code></td><td>Laat iets zien in de console, handig om te testen.</td></tr>
+        <tr><td><code>array</code></td><td>Een lijst met meerdere waarden.</td></tr>
+        <tr><td><code>object</code></td><td>Een verzameling gegevens met eigenschappen, bijvoorbeeld naam en stad.</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Korte voorbeelden</h2>
+      <table>
+        <tr>
+          <th>Onderdeel</th>
+          <th>Voorbeeld</th>
+          <th>Betekenis</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td><code>&lt;p&gt;Dit is tekst&lt;/p&gt;</code></td>
+          <td>Hier maak je een alinea met tekst.</td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td><code>&lt;h1&gt;Woordenboek&lt;/h1&gt;</code></td>
+          <td>Hier maak je de hoofdtitel van de pagina.</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td><code>p { color: blue; }</code></td>
+          <td>Alle alinea’s worden blauw.</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td><code>.foto { width: 300px; }</code></td>
+          <td>Een afbeelding met class <code>foto</code> wordt 300 pixels breed.</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td><code>knop.addEventListener("click", wisselFoto);</code></td>
+          <td>Als je op de knop klikt, gebeurt er iets, bijvoorbeeld een andere foto laten zien.</td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

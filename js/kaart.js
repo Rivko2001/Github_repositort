@@ -19,7 +19,7 @@ let geojson_marker = {
       "type": "Feature",
       "properties": {
         "naam": "milaan",
-        "adres": "Arboretum West 98, Almere"
+      
       },
       "geometry": {
         "type": "Point",
@@ -29,8 +29,8 @@ let geojson_marker = {
         {
       "type": "Feature",
       "properties": {
-        "naam": "Hogeschool Aeres",
-        "adres": "Arboretum West 98, Almere"
+        "naam": "Genua",
+      
       },
       "geometry": {
         "type": "Point",
@@ -40,25 +40,14 @@ let geojson_marker = {
          {
       "type": "Feature",
       "properties": {
-        "naam": "Hogeschool Aeres",
-        "adres": "Arboretum West 98, Almere"
+        "naam": "Nappels",
+       
       },
       "geometry": {
         "type": "Point",
         "coordinates": [14.3667053,40.7893608]
       }
     },
-           {
-      "type": "Feature",
-      "properties": {
-        "naam": "Hogeschool Aeres",
-        "adres": "Arboretum West 98, Almere"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [11.2451375,43.7679751]
-      }
-    }
 
   ]
 };

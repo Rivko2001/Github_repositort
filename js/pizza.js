@@ -1,9 +1,10 @@
 const pizzas = [
-    "img/pasta1.JPG",
-    "img/pasta.jpeg",
-    "img/pizza2.jpeg", 
-    "img/pizza_joost.JPG",
-    "img/napels_pizza.jpeg"
+  "img/eten/napels_pizza_opt.jpg",
+  "img/eten/pasta_opt.jpg",
+  "img/eten/pasta1_opt.jpg",
+  "img/eten/pizza2_opt.jpg",
+  "img/eten/pizza_joost.JPG",
+  "img/eten/pizza3_opt.jpg",
 ];
 
 let huidigeIndex = 0;

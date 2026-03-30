@@ -9,8 +9,8 @@ const selectedCity = mapElement.dataset.city || "Napels";
 const citySettings = {
   "Napels": { center: [40.8486107, 14.2778697], zoom: 12 },
   "Milaan": { center: [45.4642, 9.19], zoom: 12 },
-  "Genua":  { center: [44.4056, 8.9463], zoom: 12 },
-  "Rome":   { center: [41.9028, 12.4964], zoom: 12 }
+  "Genua": { center: [44.4056, 8.9463], zoom: 12 },
+  "Rome": { center: [41.9028, 12.4964], zoom: 12 }
 };
 
 const currentCity = citySettings[selectedCity] || citySettings["Napels"];
@@ -21,24 +21,24 @@ const map = L.map("map", {
   layers: [gray]
 });
 
-fetch("../data/10_plekken_per_stad_italie.geojson")
+fetch("../data/leukplekken.geojson")
   .then(response => response.json())
   .then(data => {
     let filteredFeatures = data.features.filter(feature => {
       const city = feature.properties.city;
 
-     if (selectedCity === "Napels") {
-  return city === "Napels" || city === "Pompeii" || city === "Pompei";
-}
+      if (selectedCity === "Napels") {
+        return city === "Napels" || city === "Pompeii" || city === "Pompei";
+      }
 
-if (selectedCity === "Genua") {
-  return city === "Genua" || city === "Genoa";
-}
+      if (selectedCity === "Genua") {
+        return city === "Genua" || city === "Genoa";
+      }
 
-return city === selectedCity;
+      return city === selectedCity;
     });
 
-    // eerst nummeren, daarna pas de kaartlaag maken
+    // Eerst nummeren
     filteredFeatures.forEach((feature, index) => {
       feature.properties.number = index + 1;
     });

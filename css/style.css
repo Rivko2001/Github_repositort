@@ -1,92 +1,200 @@
+/* ===== BASIS ===== */
 body {
   margin: 0;
   padding: 0;
   font-family: Verdana, sans-serif;
+  background-color: rgb(200, 245, 199);
+  color: #111;
 }
 
-/* Header (Italiaanse vlag) */
+h2 {
+  margin-top: 0;
+}
+
+/* ===== HEADER ===== */
 #header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg,
+  background: linear-gradient(
+    90deg,
     #ce2b37 0% 33.33%,
     #ffffff 33.33% 66.66%,
     #009246 66.66% 100%
   );
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .header-inner {
-  width: 950px;
+  width: min(1200px, calc(100% - 40px));
   margin: 0 auto;
   padding: 20px 0;
-  position: relative;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 #header h1 {
   margin: 0;
   font-family: Kalam, sans-serif;
   color: rgb(7, 5, 5);
+  font-size: 2rem;
 }
 
-/* Terug knop */
+/* ===== MENU ===== */
+.menu-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-btn,
 .back-btn {
-  position: absolute;
-  right: 0;
-  top: 20px;
-  color: rgb(14, 11, 11);
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 8px 14px;
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border: 2px solid rgb(18, 15, 15);
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
   border-radius: 4px;
 }
 
+.menu-btn:hover,
 .back-btn:hover {
-  background-color: rgba(255,255,255,0.2);
+  background-color: black;
+  color: white;
 }
 
-/* Background kleuren per schermgrootte */
-@media only screen and (min-width: 1200px) {
-  body { background-color: rgb(200, 245, 199); }
+.dropdown {
+  position: relative;
 }
 
-@media only screen and (max-width: 600px) {
-  body { background-color: rgb(202, 111, 111); }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  border: 2px solid black;
+  border-top: none;
+  z-index: 10;
 }
 
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
 
-#map {
-  height: 400px;
-  margin-top: 120px;   /* ruimte voor fixed header */
-  margin-bottom: 20px; /* kleine ruimte onder kaart */
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== ALGEMENE BREEDTE ===== */
+#inhoud,
+.video-section,
+.data-section,
+.pizza-section {
+  width: min(1200px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-section {
+  margin-top: 120px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 #inhoud {
-  width: 950px;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
-
-h2 {
-  margin-top: 0;
+/* ===== VIDEO ===== */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  aspect-ratio: 16 / 9;
 }
 
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
 
+/* ===== MAP ===== */
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 0 0 20px 0;
+}
+
+.fontawesome_icon {
+  color: rgb(235, 140, 8);
+  text-align: center;
+  line-height: 40px;
+}
+
+/* ===== KAART MARKERS / LEGENDA ===== */
+.marker-number {
+  background: #ce2b37;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid white;
+}
+
+.legend {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  max-width: 220px;
+}
+
+.legend h4 {
+  margin: 0 0 8px 0;
+}
+
+/* ===== STEDENPAGINA ===== */
 .content-row {
-  width: 950px;
+  width: min(1200px, calc(100% - 40px));
   margin: 40px auto;
   display: flex;
   align-items: flex-start;
   gap: 30px;
 }
 
-.content-text { width: 60%; }
-.content-img  { width: 40%; }
+.content-text {
+  width: 60%;
+}
+
+.content-img {
+  width: 40%;
+}
 
 .content-img img {
   width: 100%;
@@ -95,25 +203,75 @@ h2 {
   display: block;
 }
 
+/* ===== INDEX BLOKKEN ===== */
+.row {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
 
-@media (max-width: 600px) {
-  #inhoud, .content-row {
-    width: 95%;
-  }
+.txtimg {
+  width: 30%;
+  box-sizing: border-box;
+}
 
-  .content-row {
-    flex-direction: column;
-  }
+.txtimg img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
 
-  .content-text, .content-img {
-    width: 100%;
-  }
+.txt {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 16px;
+  overflow: visible;
+}
 
-  .content-img img {
-    height: 220px
-    }}
-    .pizza-section {
-  width: 950px;
+/* desktop afwisseling */
+.left .txtimg {
+  order: 1;
+}
+
+.left .txt {
+  order: 2;
+}
+
+.right .txt {
+  order: 1;
+}
+
+.right .txtimg {
+  order: 2;
+}
+
+/* ===== DATAVISUALISATIE ===== */
+.data-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.data-section select {
+  margin: 15px 0 25px 0;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+#stedenChart {
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== PIZZA / PASTA ===== */
+.pizza-section {
   margin: 60px auto;
   text-align: center;
 }
@@ -123,9 +281,24 @@ h2 {
   margin: 0 auto 20px auto;
 }
 
-.pizza-image {
-  width: 100%;
-  margin-bottom: 20px;
+.pizza-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+.pizza-gif {
+  width: 80px;
+  height: auto;
+}
+
+.pizza-main {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
 #pizzaKnop {
@@ -141,26 +314,19 @@ h2 {
 #pizzaKnop:hover {
   background-color: #009246;
 }
-.pizza-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-/* Links vast paneel */
+
+/* ===== RATING ===== */
 .rating-panel {
   position: fixed;
   left: 12px;
-  top: 140px;                 /* pas aan als je header hoger/lager is */
+  top: 140px;
   width: 260px;
-  background: rgba(255,255,255,0.92);
-  border: 2px solid rgba(0,0,0,0.15);
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 12px;
   z-index: 2000;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  font-family: Verdana, sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .rating-panel h3 {
@@ -168,8 +334,14 @@ h2 {
   font-size: 16px;
 }
 
-.rating-item { margin-bottom: 10px; }
-.rating-item .label { font-size: 13px; margin-bottom: 6px; }
+.rating-item {
+  margin-bottom: 10px;
+}
+
+.rating-item .label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
 
 .stars {
   display: inline-flex;
@@ -186,10 +358,18 @@ h2 {
   cursor: pointer;
   font-size: 20px;
   line-height: 1;
+  color: #777;
 }
 
-.star.off { opacity: 0.35; }
-.star.on  { opacity: 1; }
+.star.off {
+  opacity: 0.5;
+  color: #999;
+}
+
+.star.on {
+  opacity: 1;
+  color: #f2b01e;
+}
 
 .rate-btn {
   width: 100%;
@@ -202,14 +382,16 @@ h2 {
   cursor: pointer;
 }
 
-.rate-btn:hover { background: #009246; }
+.rate-btn:hover {
+  background: #009246;
+}
 
 .avg-out {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
-/* Effects layer (vol scherm) */
+/* ===== EFFECTEN ===== */
 #effectsLayer {
   position: fixed;
   inset: 0;
@@ -218,7 +400,6 @@ h2 {
   overflow: hidden;
 }
 
-/* Confetti stukjes */
 .confetti {
   position: absolute;
   top: -20px;
@@ -235,43 +416,95 @@ h2 {
   }
 }
 
-/* Verdrietige smileys links */
 .sad {
   position: absolute;
   top: -30px;
-  left: 6px;                 /* links */
+  left: 6px;
   font-size: 18px;
   opacity: 0.95;
   animation: sadFall linear forwards;
 }
 
 @keyframes sadFall {
-  to { transform: translateY(110vh); }
+  to {
+    transform: translateY(110vh);
+  }
 }
 
-@media screen and (max-width: 768px) {
-
-  .content-row {
-    flex-direction: column;   /* tekst boven, foto onder */
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  #header h1 {
+    font-size: 1.7rem;
   }
 
-  .content-text {
+  .header-inner,
+  #inhoud,
+  .video-section,
+  .data-section,
+  .pizza-section {
+    width: calc(100% - 40px);
+  }
+
+  /* index: tekst boven, foto onder */
+  .row {
+    display: block;
+  }
+
+  .txt,
+  .txtimg {
     width: 100%;
+    display: block;
   }
 
+  .txt {
+    padding: 0 0 12px 0;
+  }
+
+  .txtimg img {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  /* stedenpagina */
+  .content-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-text,
   .content-img {
     width: 100%;
   }
 
   .content-img img {
-    width: 100%;
-    height: auto; 
-  }
- body {
-    font-size: 14px;
+    height: 280px;
   }
 
-  h1 {
+  .rating-panel {
+    width: 220px;
+  }
+
+  /* legenda 20% kleiner */
+  .legend {
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
+}
+
+/* ===== TELEFOON ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: rgb(202, 111, 111);
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #header h1 {
     font-size: 22px;
   }
 
@@ -284,135 +517,94 @@ h2 {
     line-height: 1.4;
   }
 
+  .menu-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .video-section {
+    margin-top: 140px;
+  }
+
+  /* index */
+  .row {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .txt,
+  .txtimg {
+    width: 100%;
+    display: block;
+  }
+
+  .txt {
+    padding: 0 0 10px 0;
+  }
+
+  .txtimg img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  /* stedenpagina */
+  .content-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content-text,
+  .content-img {
+    width: 100%;
+  }
+
+  .content-img img {
+    height: 220px;
+  }
+
+  #map {
+    height: 280px;
+    margin-top: 90px;
+  }
+
+  #stedenChart {
+    width: 100%;
+    height: auto;
+  }
+
+  .pizza-wrapper {
+    flex-direction: column;
+  }
+
+  .rating-panel {
+    position: static;
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  /* legenda 20% kleiner */
+  .legend {
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
 }
 
-.fontawesome_icon {
-  color: rgb(236, 145, 17);
-  text-align: center;
-  line-height: 40px;
-}
-    #map {
-    height:400px;
-    }
+/* ===== HEEL KLEIN SCHERM ===== */
+@media (max-width: 500px) {
+  #map {
+    height: 240px;
+  }
 
-    /* Zie: https://gist.github.com/adriennn/4678d585ac3774650c16 */
-    .fontawesome_icon{
-    color: rgb(235, 140, 8);   
-    }
-    #inhoud { margin-top: 120px; width: 950px; margin-left:auto; margin-right:auto; }
+  .txtimg img,
+  .content-img img {
+    height: 190px;
+  }
 
-    .row { width: 100%; height: 300px; overflow: hidden; margin: 16px 0; box-sizing: border-box; }
-    .txtimg { width: 30%; height: 300px; float: left; box-sizing: border-box; }
-    .txtimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .txt { width: 70%; float: right; box-sizing: border-box; padding: 16px; overflow: auto; }
-    .right .txtimg { float: right; }
-    .right .txt { float: left; }
+  .pizza-gif {
+    width: 60px;
+  }
 
-    @media (max-width: 500px) {
-      .row { height: auto; }
-      .txtimg, .txt { width: 100%; float: none; height: auto; }
-      .txtimg img { height: auto; }
-    }
-    #map {
-  margin-bottom: 20px;
-}
-
-#inhoud {
-  margin: 0 auto;
-}
-.marker-number {
-  background: #ce2b37;
-  color: white;
-  font-weight: bold;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  border: 2px solid white;
-}
-.legend {
-  background: white;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  font-size: 14px;
-  max-width: 200px;
-}
-
-.legend h4 {
-  margin: 0 0 8px 0;
-}
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Groepeert dropdown + terug knop */
-.menu-group {
-  display: flex;
-  gap: 15px;
-}
-
-/* Zelfde stijl voor beide knoppen */
-.menu-btn {
-  background-color: transparent;
-  border: 2px solid black;
-  padding: 8px 14px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-/* Hover effect */
-.menu-btn:hover {
-  background-color: black;
-  color: white;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-}
-
-/* Dropdown inhoud */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  min-width: 180px;
-  border: 2px solid black;
-  border-top: none;
-  z-index: 10;
-}
-
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-content a:hover {
-  background-color: black;
-  color: white;
-}
-
-/* Uitklappen */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.fontawesome_icon {
-  color: rgb(235, 140, 8);
-  text-align: center;
-  line-height: 40px;
+  .pizza-main {
+    width: 220px;
+  }
 }

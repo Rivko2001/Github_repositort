@@ -154,7 +154,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Porto Antico",
         "type": "harbor"
       },
@@ -169,7 +169,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Acquario di Genova",
         "type": "aquarium"
       },
@@ -184,7 +184,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Via Garibaldi",
         "type": "street"
       },
@@ -199,7 +199,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Palazzi dei Rolli",
         "type": "palaces"
       },
@@ -214,7 +214,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Cattedrale di San Lorenzo",
         "type": "cathedral"
       },
@@ -229,7 +229,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Boccadasse",
         "type": "seaside"
       },
@@ -244,7 +244,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Spianata Castelletto",
         "type": "viewpoint"
       },
@@ -259,7 +259,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Galata Museo del Mare",
         "type": "museum"
       },
@@ -274,7 +274,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Lanterna di Genova",
         "type": "lighthouse"
       },
@@ -289,7 +289,7 @@
     {
       "type": "Feature",
       "properties": {
-        "city": "Genova",
+        "city": "Genoa",
         "name": "Piazza De Ferrari",
         "type": "square"
       },

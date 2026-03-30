@@ -1,46 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-  <title>Reizen door Italië</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reizen door Italië</title>
+
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
+
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-  
-  <!-- Registreer bij https://fontawesome.com -->
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
   <script src="https://kit.fontawesome.com/e766bcebc4.js" crossorigin="anonymous"></script>
-  <style>
-    #map {
-    height:400px;
-    }
-
-    /* Zie: https://gist.github.com/adriennn/4678d585ac3774650c16 */
-    .fontawesome_icon{
-    color: rgb(235, 140, 8);   
-    }
-    #inhoud { margin-top: 120px; width: 950px; margin-left:auto; margin-right:auto; }
-
-    .row { width: 100%; height: 300px; overflow: hidden; margin: 16px 0; box-sizing: border-box; }
-    .txtimg { width: 30%; height: 300px; float: left; box-sizing: border-box; }
-    .txtimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .txt { width: 70%; float: right; box-sizing: border-box; padding: 16px; overflow: auto; }
-    .right .txtimg { float: right; }
-    .right .txt { float: left; }
-
-    @media (max-width: 500px) {
-      .row { height: auto; }
-      .txtimg, .txt { width: 100%; float: none; height: auto; }
-      .txtimg img { height: auto; }
-    }
-  </style>
 </head>
 
-<body>
+<body class="home-page">
 
   <div id="header">
     <div class="header-inner">
@@ -48,69 +27,123 @@
     </div>
   </div>
 
-  <div id="inhoud">
-     <div id="inhoud" style="margin-top:120px; width:950px; margin-left:auto; margin-right:auto;">
+  <div class="video-section">
+    <h2>Welkom in Italië</h2>
+    <p>
+      Voordat je de steden bekijkt, krijg je hier eerst een korte indruk van Italië.
+    </p>
 
-    <h2>plaats</h2>
-    <p>Klik op de marker voor informatie.</p>
-
-    <!-- KAART CONTAINER -->
-    <div id="map"></div>
-<script src="javaschript/kaart.js"></script>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/qDaLSX16VTM"
+        title="Video over Italië"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
+  <div id="inhoud">
+    <h2>Plaatsen</h2>
+    <p>
+      Omdat Italië zo groot is, is het te groot om in één keer te behandelen.
+      Ik heb hier een aantal plaatsen voor jullie uitgelegd die je sowieso een keer zou moeten bezoeken.
+      Naast de bekende plaatsen zoals Rome en Venetië zijn dit de plaatsen waar ik als eerste heen zou gaan
+      als ik het zelf opnieuw zou doen.
+      Maar ik heb nog heel veel plaatsen op mijn lijstje die ik ook wel zou willen bezoeken.
+    </p>
+
+    <div id="map"></div>
+
+    <div class="data-section">
+      <h2>Vergelijking van de steden</h2>
+      <p>
+        Hier vergelijk ik de steden op basis van een aantal cijfers, zoals inwoners,
+        toeristen, oppervlakte, grootte van de binnenstad en het aantal dagen dat ik er was.
+      </p>
+
+      <label for="grafiekKeuze">Kies wat je wilt vergelijken:</label>
+      <select id="grafiekKeuze">
+        <option value="inwoners">Inwoners</option>
+        <option value="toeristen">Toeristen per jaar</option>
+        <option value="oppervlakte">Oppervlakte (km²)</option>
+        <option value="binnenstad">Grootte historische binnenstad (km²)</option>
+        <option value="dagen">Aantal dagen dat ik er was</option>
+      </select>
+
+      <canvas id="stedenChart" width="900" height="500"></canvas>
+    </div>
+
     <div class="row right">
-      <div class="txtimg"><img src="img/pasta.jpeg" alt="Milaan"></div>
+      <div class="txtimg">
+        <img src="img/pasta.jpeg" alt="Milaan">
+      </div>
       <div class="txt">
         <h2>Milaan</h2>
-        <p>Milaan is modern... <a href="htm/milaan.html">Meer lezen &raquo;</a></p>
+        <p>
+          Milaan is modern en stijlvol en was voor mij een fijne eerste stad om Italië te ontdekken.
+          <a href="htm/milaan.html">Meer lezen &raquo;</a>
+        </p>
       </div>
     </div>
 
-   
-      
- <div class="row left">
-      <div class="txtimg"><img src="img/Genua_1.jpg" alt="Genua"></div>
+    <div class="row left">
+      <div class="txtimg">
+        <img src="img/Genua_1.jpg" alt="Genua">
+      </div>
       <div class="txt">
         <h2>Genua</h2>
         <p>
-         Dit is de eerste stad die ik helemaal in mijn eentje heb bezocht. 
-         Sindsdien heeft deze stad een speciale plek in mijn hart. De bijzondere geschiedenis van Genua,
-         een stad die is opgegroeid tussen de bergen, die uitgroeide tot een machtige handelsstad en zich door de eeuwen heen steeds verder heeft ontwikkeld heeft mij echt geraakt.
-        De combinatie van smalle straatjes, indrukwekkende gebouwen en de ligging tussen zee en bergen heeft mijn hart veroverd.
+          Dit is de eerste stad die ik helemaal in mijn eentje heb bezocht.
+          Sindsdien heeft deze stad een speciale plek in mijn hart. De bijzondere geschiedenis van Genua,
+          een stad die is opgegroeid tussen de bergen, die uitgroeide tot een machtige handelsstad en zich
+          door de eeuwen heen steeds verder heeft ontwikkeld, heeft mij echt geraakt.
+          De combinatie van smalle straatjes, indrukwekkende gebouwen en de ligging tussen zee en bergen
+          heeft mijn hart veroverd.
           <a href="htm/genua.html">Klik hier om meer te lezen &raquo;</a>
-        </p>>
+        </p>
       </div>
     </div>
 
     <div class="row right">
-      <div class="txtimg"><img src="img/napels.jpeg" alt="Napels"></div>
+      <div class="txtimg">
+        <img src="img/napels.jpeg" alt="Napels">
+      </div>
       <div class="txt">
         <h2>Napels</h2>
-        <p>Napels is een prachtige stad... <a href="htm/napels.html">Meer lezen &raquo;</a></p>
+        <p>
+          Napels is een prachtige stad met veel energie, geschiedenis en natuurlijk geweldig eten.
+          <a href="htm/napels.html">Meer lezen &raquo;</a>
+        </p>
       </div>
     </div>
 
-    <!-- Pizza/Pasta wissel -->
     <div class="pizza-section">
-      <h2>Pizza en Pasta in Italië</h2>
-       <p>
-    Italië staat bekend om zijn pizza en pasta. Natuurlijk heb ik in de weken dat ik
-    in Italië was bijna elke avond pizza of pasta gegeten.
-    Ik heb een aantal foto's voor jullie bewaard.
-    Als je op de knop hieronder drukt, zie je telkens een ander gerecht.
-  </p>
+      <p>
+        Italië staat bekend om zijn pizza en pasta. Natuurlijk heb ik in de weken dat ik in Italië was
+        bijna elke avond pizza of pasta gegeten. Ik heb een aantal foto's voor jullie bewaard.
+        Als je op de knop hieronder drukt, zie je telkens een ander gerecht.
+      </p>
 
-      <div class="pizza-image">
-        <img id="pizzaFoto" src="img/pasta1.JPG" alt="Pizza of pasta">
+      <div class="pizza-wrapper">
+        <img src="img/gifpasta.gif" class="pizza-gif" alt="Pasta gif">
+
+        <button id="pizzaKnop">Toon ander gerecht</button>
+
+        <img src="img/gifpizza.gif" class="pizza-gif" alt="Pizza gif">
+
+        <img id="pizzaFoto"
+             src="img/pasta1.JPG"
+             class="pizza-main"
+             alt="Wisselende foto van eten">
       </div>
-
-      <button id="pizzaKnop">Toon ander gerecht</button>
     </div>
-
   </div>
 
-  <script src="javaschript/pizza.js"></script>
-  
+  <script src="js/kaart.js"></script>
+  <script src="data/stedenData.js"></script>
+  <script src="js/datavisuelisie.js"></script>
+  <script src="js/pizza.js"></script>
+
 </body>
 </html>
